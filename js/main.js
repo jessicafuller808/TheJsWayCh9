@@ -39,12 +39,10 @@ class Dog {
  */
 
     class Character {
-        constructor(name, health, strength, gold, keys) {
+        constructor(name, health, strength) {
           this.name = name;
           this.health = health;
           this.strength = strength;
-          this.gold = gold;
-          this.keys = keys;
           this.xp = 0; // XP is always zero for new characters
           this.gold = 10; // Players always begin with 10 gold
           this.keys = 1; // Players always begin with 1 key
