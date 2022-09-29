@@ -98,3 +98,50 @@ class Dog {
       
       console.log(aurora.describe());
       console.log(glacius.describe());
+
+ /**
+ * *Account List*
+ * Let's build upon a previous account object exercise. A bank account is still defined by:
+      - A name property.
+      - A balance property, initially set to 0.
+      - A credit method adding the value passed as an argument to the account balance.
+      - A describe method returning the account description.
+ * TODO: Write a program that creates three accounts: one belonging to Sean, another to Brad and the third one to Georges. 
+      These accounts are stored in an array.
+      Next, the program credits 1000 to each account and shows its description.
+ */
+
+
+// "owner: Sean, balance: 1000"
+// "owner: Brad, balance: 1000"
+// "owner: Georges, balance: 1000"
+
+class Account {
+    constructor(name) {
+        this.name = name;
+        this.balance = 0;
+    }
+
+    credit(value) {
+        this.balance += value;
+    }
+
+    describe() {
+        console.log(`owner: ${this.name}, balance: ${this.balance}`);
+    }
+}
+
+let accounts = [];
+
+let sean = new Account('Sean');
+let brad = new Account('Brad');
+let georges = new Account('Georges');
+
+accounts.push(sean);
+accounts.push(brad);
+accounts.push(georges);
+
+accounts.forEach( e => {
+    e.credit(1000);
+    e.describe();
+});
